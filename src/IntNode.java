@@ -167,10 +167,24 @@ public class IntNode
    {
        IntNode ptr = head;
        IntNode position;
-       IntNode node = new IntNode(value, head);
+      // IntNode newnode = new IntNode(value, head);
        
        position = listPosition(head, pos);
-       position.addNodeAfter(value);
+       if(position.link != null)
+       {//when put new node between required place and its next.
+    	   IntNode newNode = new IntNode(value, position.link);
+    	   System.out.println("inside of method if is true");
+    	   System.out.println(newNode.toString());
+    	   
+    	   
+    	   
+       }
+       else
+       {//required place is not in between
+    	   position.addNodeAfter(value);
+       }
+    	  
+       
        
        System.out.println("inside of inserAtPos");
        System.out.println(position.toString());
