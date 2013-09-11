@@ -22,7 +22,7 @@ public class IntArrayBagMain {
         bag2.add(90);
         bag2.add(60);
         bag2.add(5);
-        bag2.add(70);
+        bag2.add(4);
         bag2.add(10);
         bag2.add(20);
         

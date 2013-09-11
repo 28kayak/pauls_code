@@ -167,11 +167,12 @@ public class IntArrayBag implements Cloneable
        for(int i = 0; i < b1.manyItems; i++)
        {
     	   System.out.println("in for-loop");
-           if(b1.countOccurrences(b2.data[i]) == 2)
+           if(b2.countOccurrences(b1.data[i]) == 1)
            {
-        	   System.out.println("b2.data["+ i + "]" + b2.data[i]);
+        	   System.out.println("count occurr " + b2.countOccurrences(b1.data[i]));
+        	   System.out.println("b1.data["+ i + "]" + b1.data[i]);
                System.out.println("Test 2");
-               temp.add(b2.data[i]);
+               temp.add(b1.data[i]);
            }
        }
        return temp;
