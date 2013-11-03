@@ -14,7 +14,8 @@ public class IntTreeBag implements Cloneable{
   
  private IntBTNode root;   
  
- public IntTreeBag(){
+ public IntTreeBag()
+ {
      this.root = null;
  }
  /**
@@ -33,18 +34,23 @@ public class IntTreeBag implements Cloneable{
     
     if(root == null){//creates the first node and it is the root
         root = new IntBTNode(element, null, null);
+        System.out.println("element of root = " + element);
     }else{
 
         while(!done){
-            if(element < cursor.getData()){//then focus on the left
-                if(cursor.getLeft() == null){//if null then creates a node
+            if(element < cursor.getData())
+            {//then focus on the left
+                if(cursor.getLeft() == null)
+                {//if null then creates a node
                     cursor.setLeft(node);
                     done = true;
-                }else{//then continue going through node until cursor.getLeft == null
+                }else
+                {//then continue going through node until cursor.getLeft == null
                     cursor = cursor.getLeft();
                 }
             }else{//focus on the right
-                if(cursor.getRight() == null){
+                if(cursor.getRight() == null)
+                {
                     cursor.setRight(node);
                     done = true;
                 }else{
@@ -99,7 +105,15 @@ public void print()
        System.out.println("This TreeBag is empty.");
     }else
     {
+    	System.out.println("inordered");
         root.inorderPrint();
+        
+        System.out.println("preodered");
+        root.preorderPrint();
+        
+        System.out.println("postodered");
+        root.postorderPrint();
+        
     }
 }
    /**

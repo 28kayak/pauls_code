@@ -18,6 +18,8 @@ public class IntBTNode
  //      left and right children.
  private int data;
  private IntBTNode left, right;   
+ static private int numOfInstace = 0;
+ 
 
  /**
  * Initialize a <CODE>IntBTNode</CODE> with a specified initial data and links
@@ -36,9 +38,13 @@ public class IntBTNode
  **/   
  public IntBTNode(int initialData, IntBTNode initialLeft, IntBTNode initialRight)
  {
+	 numOfInstace++;
     data = initialData;
     left = initialLeft;
     right = initialRight;
+    System.out.println(" initialData = " + initialData + "\n numOfInstance = " + numOfInstace);
+   
+   
  }      
  /**
  * Accessor method to get the data from this node.   
@@ -199,7 +205,7 @@ public class IntBTNode
  
     // Print the indentation and the data from the current node:
     for (i = 1; i <= depth; i++)
-       System.out.print("    ");
+       System.out.print("  hello  ");
     System.out.println(data);
 
     // Print the left subtree (or a dash if there is a right child and no left child)   
@@ -208,7 +214,7 @@ public class IntBTNode
     else if (right != null)
     {
        for (i = 1; i <= depth+1; i++)
-          System.out.print("    ");
+          System.out.print(" hey   ");
        System.out.println("--");
     }
 
