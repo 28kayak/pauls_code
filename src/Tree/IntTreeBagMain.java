@@ -16,17 +16,20 @@ public class IntTreeBagMain {
       IntTreeBag tree2 = new IntTreeBag();
       IntTreeBag tree3 = new IntTreeBag();
       
-      tree1.add(10);
+      tree1.add(55);
       tree1.add(50);
       tree1.add(8);
       tree1.add(61);
       tree1.add(100);
       tree1.add(2);
       tree1.add(2);
+      tree1.add(2);
       
       System.out.println("Bag 1");
       tree1.print();
+      System.out.println("occurrence = " + tree1.countOccurrences(2));
       
+      /**
       tree2.add(60);
       tree2.add(70);
       tree2.add(600);
@@ -43,5 +46,6 @@ public class IntTreeBagMain {
       System.out.println("\nAddAll tree1 and tree2");
       tree1.addAll(tree2);
       tree1.print();
+      **/
   }
 }

@@ -13,7 +13,7 @@ import java.io.*;
 public class IntTreeBag implements Cloneable{
   
  private IntBTNode root;   
- 
+ static private int counter = 0;
  public IntTreeBag()
  {
      this.root = null;
@@ -53,7 +53,8 @@ public class IntTreeBag implements Cloneable{
                 {
                     cursor.setRight(node);
                     done = true;
-                }else{
+                }else
+                {
                     cursor = cursor.getRight();
                 }
             }
@@ -188,18 +189,31 @@ public void print()
  public int countOccurrences(int target){
     IntBTNode cursor = root;
     int count = 0; 
-    
+    int nextElement;
     if(root == null){
         return 0;     
     }
     while(cursor != null){
-        if(target < cursor.getData()){
+        if(target < cursor.getData())
+        {
+        	nextElement = cursor.getLeft().getData();
+        	System.out.println("next data = " +nextElement);
             cursor = cursor.getLeft();
-        }else if(target > cursor.getData()){
+            
+            
+        }else if(target > cursor.getData())
+        {
             cursor = cursor.getRight();
-        }else{//means target and cursor.data are equal 
+        }else
+        {//means target and cursor.data are equal 
             count++;
-            cursor = cursor.getLeft();   
+            
+            System.out.println("find!!" + counter + "\ncount = " + count);
+            System.out.println("next value right" + cursor.getRight().getData());
+            System.out.println("next value left" + cursor.getLeft().getData());
+            
+            cursor = cursor.getLeft();  
+            
       }
     }
     return count;
