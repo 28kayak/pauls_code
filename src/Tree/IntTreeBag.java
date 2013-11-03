@@ -209,10 +209,10 @@ public void print()
             count++;
             
             System.out.println("find!!" + counter + "\ncount = " + count);
-            System.out.println("next value right" + cursor.getRight().getData());
-            System.out.println("next value left" + cursor.getLeft().getData());
-            
-            cursor = cursor.getLeft();  
+            //System.out.println("next value right" + cursor.getRight().getData());
+            //System.out.println("next value left" + cursor.getLeft().getData()); 
+            //cursor = cursor.getLeft();  
+            cursor = cursor.getRight();
             
       }
     }

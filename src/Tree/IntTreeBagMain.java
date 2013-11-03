@@ -24,10 +24,12 @@ public class IntTreeBagMain {
       tree1.add(2);
       tree1.add(2);
       tree1.add(2);
+      tree1.add(100);
       
       System.out.println("Bag 1");
       tree1.print();
-      System.out.println("occurrence = " + tree1.countOccurrences(2));
+      System.out.println("occurrence of 2 = " + tree1.countOccurrences(2));
+      System.out.println("occurrence of 100 = " + tree1.countOccurrences(100));
       
       /**
       tree2.add(60);
